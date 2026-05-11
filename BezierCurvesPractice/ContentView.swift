@@ -26,7 +26,7 @@ struct ContentView: View {
                                 path.addLine(to: linepoint)
                                 
                                 /*
-                                let randomControlPoint = CGPoint(x: linepoint.x + CGFloat.random(in: -0.1...0.1),
+                                et randomControlPoint = CGPoint(x: linepoint.x + CGFloat.random(in: -0.1...0.1),
                                                                  y: linepoint.y + CGFloat.random(in: -0.1...0.1))
                                 
                                 path.addQuadCurve(to: linepoint, control: randomControlPoint)
@@ -39,7 +39,7 @@ struct ContentView: View {
                         .onAppear {
                             leftLine.start = CGPoint(
                                 x: width * CGFloat.random(in: 0...1),
-                                y: height * CGFloat.random(in: 0...0.2))
+                                y: 0)
                             
                             leftLine.createPath(width: width, height: height)
                         }
@@ -55,21 +55,13 @@ struct ContentView: View {
                                 
                                 path.addLine(to: linepoint)
                                 
-                                /*
-                                let randomControlPoint = CGPoint(x: linepoint.x + CGFloat.random(in: -0.1...0.1),
-                                                                 y: linepoint.y + CGFloat.random(in: -0.1...0.1))
-                                
-                                path.addQuadCurve(to: linepoint, control: randomControlPoint)
-                                
-                                path.addArc(center: linepoint, radius: CGFloat.random(in: 40...80), startAngle: Angle(degrees: 50), endAngle: Angle.degrees(200), clockwise: true)
-                                 */
                             }
                         }
                         .stroke(rightGradient, style: StrokeStyle(lineWidth: 50, lineCap: .round, lineJoin: .round))
                         .onAppear {
                             rightLine.start = CGPoint(
                                 x: width * CGFloat.random(in: 0...1),
-                                y: height * CGFloat.random(in: 0...0.2))
+                                y: 0)
                             rightLine.createPath(width: width, height: height)
                         }
                     }
