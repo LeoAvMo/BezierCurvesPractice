@@ -123,6 +123,7 @@ playground.xcworkspace
 ## Various settings
 
 ## Other
+/.vscode/*
 
 ### Xcode Patch ###
 *.xcodeproj/*
